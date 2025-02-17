@@ -1,0 +1,113 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Flexbox centering on the body */
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+  }
+  
+  /* Container to hold and center all content */
+  .container {
+    width: 800px;           
+    text-align: center;     
+  }
+  
+  /* Spacing for each section */
+  header, .resources, .feedback {
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+/* Style the tooltip links */
+.tooltip {
+  position: relative;
+}
+
+/* Create a tooltip using a pseudo-element */
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -2.5em; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.8em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease;
+  z-index: 1000;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* JS Resources Under Construction */
+.js-resources .under-construction {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.js-resources .under-construction i {
+  font-size: 50px;
+  color: #ffcc00; 
+  margin-bottom: 10px;
+  display: block;
+}
+
+.js-resources .under-construction p {
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+}
+
+.js-resources h4 {
+  padding-top: 20px;
+}
+
+.under-construction {
+  display: inline-flex;
+  align-items: center;   
+  justify-content: center;
+}
+
+.under-construction i {
+  font-size: 30px;       
+  color: #ffcc00;        
+  margin: 5px;
+  transform: scale(0.5);
+}
+
+.under-construction span {
+  font-size: 20px;
+  color: #333;
+}
